@@ -2,7 +2,7 @@ import './App.css';
 import { useDraw } from './hooks/useDraw';
 import { drawLine } from './hooks/drawline';
 import Sidebar from './component/sidebar';
-import { useColorProvider } from '../state/colorProvider';
+import { useColorProvider } from './state/colorProvider';
 import Navbar from './component/navbar';
 
 

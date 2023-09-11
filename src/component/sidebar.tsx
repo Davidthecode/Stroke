@@ -1,7 +1,7 @@
 import { HexColorPicker } from "react-colorful";
 import { useDraw } from '../hooks/useDraw';
 import { drawLine } from '../hooks/drawline'
-import {useColorProvider} from '../../state/colorProvider'
+import {useColorProvider} from '../state/colorProvider'
 
 export default function Sidebar() {
     const {color, setColor} = useColorProvider();
