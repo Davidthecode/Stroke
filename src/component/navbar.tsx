@@ -27,7 +27,7 @@ export default function Navbar () {
                 <div className='mr-6'>
                     <button className="border px-4 py-1 rounded-md font-medium">save</button>
                 </div>
-                <Link  to='.....' className='cursor-pointer' target="_blank">
+                <Link  to='https://github.com/Davidthecode/Stroke' className='cursor-pointer' target="_blank">
                    <AiFillGithub size='1.3rem'/>
                 </Link >
             </div>

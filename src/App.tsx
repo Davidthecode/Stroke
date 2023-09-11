@@ -1,6 +1,6 @@
 import './App.css';
-import { useDraw } from '../hooks/useDraw';
-import { drawLine } from '../hooks/drawline';
+import { useDraw } from './hooks/useDraw';
+import { drawLine } from './hooks/drawline';
 import Sidebar from './component/sidebar';
 import { useColorProvider } from '../state/colorProvider';
 import Navbar from './component/navbar';
@@ -19,13 +19,13 @@ function App() {
         <Navbar />
       </div>
       <div className='bg-white flex-1 flex justify-between items-center'>
-        <div className='border border-black rounded-md ml-8'>
+        <div className='border border-black rounded-md ml-8 mr-'>
           <canvas
             ref={canvasRef}
             onMouseDown={onMouseDown}
             width={1200}
             height={600}
-            className='h-full w-full'
+            className=''
           />
         </div>
         <div className='mr-8 border-l border-l-[#686C76] h-full items-center flex'>
