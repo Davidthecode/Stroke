@@ -1,10 +1,16 @@
-import {AiFillGithub} from 'react-icons/ai'
-import {MdOutlineDarkMode} from 'react-icons/md'
-import {MdOutlineLightMode} from 'react-icons/md'
-import { Link } from 'react-router-dom'
-import {useState} from 'react'
+import {AiFillGithub} from 'react-icons/ai';
+import {MdOutlineDarkMode} from 'react-icons/md';
+import {MdOutlineLightMode} from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import {TbLayoutSidebarRightExpand} from 'react-icons/tb';
 
-export default function Navbar () {
+type SidebarType = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+};
+
+export default function Navbar ({setIsOpen}: SidebarType) {
+    
     const [toggleTheme, setToggleTheme] = useState(false);
 
     const handleLightmode = () => {
@@ -15,8 +21,12 @@ export default function Navbar () {
         setToggleTheme(true)
     }
 
+    const handleSidebarToggle = () => {
+        setIsOpen(true)
+    }
+
     return (
-        <nav className='flex h-full border-b border-b-[#686C76] items-center justify-between'>
+        <nav className='flex h-full border-b border-b-[#686C76] border-opacity-30 items-center justify-between'>
             <div className="ml-8">
                 <h1 className="text-xl font-medium">Stroke</h1>
             </div>
@@ -30,6 +40,9 @@ export default function Navbar () {
                 <Link  to='https://github.com/Davidthecode/Stroke' className='cursor-pointer' target="_blank">
                    <AiFillGithub size='1.3rem'/>
                 </Link >
+                <div className='largeTablet:block hidden ml-6 cursor-pointer'>
+                    <TbLayoutSidebarRightExpand size='1.5rem' onClick={handleSidebarToggle}/>
+                </div>
             </div>
         </nav>
     )

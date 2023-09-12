@@ -2,10 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Draw, Point } from '../types/type'
 import { useColorProvider } from '../state/colorProvider'
 
-export const useDraw = (
-    onDraw: ({ ctx, currentPoint, prevPoint }: Draw) => void,
-    setColor: (color: string) => void
-) => {
+export const useDraw = (onDraw: ({ ctx, currentPoint, prevPoint }: Draw) => void, setColor: (color: string) => void) => {
     const { color } = useColorProvider()
     const [mouseDown, setMouseDown] = useState(false)
 
