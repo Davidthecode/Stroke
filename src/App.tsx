@@ -55,6 +55,7 @@ function App() {
             </button>
           </div>
           <canvas
+            id="canvas"
             width={canvasWidth}
             height={600}
             ref={canvasRef}
