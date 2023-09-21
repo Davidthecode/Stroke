@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from 'react-icons/ai';
 import {AiOutlineClose} from 'react-icons/ai';
+import { useThemeProvider } from "../state/themeProvider";
 
 type SidebarType = {
     isOpen: boolean,
@@ -11,6 +12,7 @@ type SidebarType = {
 };
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarType) {
+    const {toggleTheme} = useThemeProvider();
     const { color, setColor } = useColorProvider();
     const [isColorShown, setIsColorShown] = useState(false);
 
@@ -19,7 +21,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarType) {
     };
 
     return (
-        <div className={`h-full border-l border-l-[#686C76] border-opacity-30  ${isOpen ? 'block' : 'largeTablet:hidden'}`}>
+        <div className={`h-full border-l border-l-[#686C76] border-opacity-30 ${toggleTheme ? 'bg-[#1D1D1D]': 'bg-white'}  ${isOpen ? 'block' : 'largeTablet:hidden'}`}>
             <div className="ml-4 pt-4 hidden largeTablet:block">
                 <AiOutlineClose size='1.1rem' className='cursor-pointer' onClick={() => setIsOpen(false)} />
             </div>

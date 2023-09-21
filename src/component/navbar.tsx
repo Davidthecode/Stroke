@@ -36,7 +36,7 @@ export default function Navbar({ setIsOpen }: SidebarType) {
                     {toggleTheme ? <MdOutlineLightMode size='1.4rem' onClick={handleLightmode} /> : <MdOutlineDarkMode size='1.4rem' onClick={handleDarkmode} />}
                 </div>
                 <div className='mr-6'>
-                    <button className="border px-4 py-1 rounded-md font-medium">save</button>
+                    <button className="border px-4 py-1 rounded-md font-medium extraSmall:hidden">save</button>
                 </div>
                 <Link to='https://github.com/Davidthecode/Stroke' className='cursor-pointer' target="_blank">
                     <AiFillGithub size='1.3rem' />
