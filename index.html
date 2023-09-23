@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/stroke-logo.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stroke</title>
+  <meta property="og:title" content="Stroke" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stroke-canvas.vercel.app/" />
+  <meta property="og:image" content="/stroke-logo.ico" /> 
+  <meta property="og:description" content="Seamlessly connect with colleagues in real-time and boost productivity." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Stroke-canvas" />
+  <meta name="author" content="David" />
+  <meta name="description" content="Seamlessly connect with colleagues in real-time and boost productivity." />
+  <meta name="application-name" content="Stroke" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6BCXF9PXC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-B6BCXF9PXC');
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
